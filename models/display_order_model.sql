@@ -6,4 +6,4 @@
 
 
 select *
-from {{ source('landing', 'ordr') 
+from {{ source('landing', 'ordr') }}
