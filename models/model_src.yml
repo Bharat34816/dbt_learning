@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: landing
+    database: "{{ var('landing_database') }}"
+    schema: L1_LANDING
+    config:
+      freshness:
+        warn_after: {count: 1, period: day}
+        error_after: {count: 3, period: day}
+      loaded_at_field: Updated_at
+
+    tables:
+      - name: cust
+        identifier: customers
+        
+
+      - name: ordr
+        identifier: orders
+
+      - name: ordritms
+        identifier: orderitems
