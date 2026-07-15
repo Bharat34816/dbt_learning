@@ -4,5 +4,6 @@
     tags=['landing_display']
 ) }}
 
+
 select *
 from {{ source('landing', 'cust') }}
